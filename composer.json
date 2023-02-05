@@ -14,11 +14,14 @@
         "drupal/config_update": "1.7",
         "drupal/core": "9.4.7",
         "drupal/core-composer-scaffold": "9.4.7",
+        "drupal/dark_mode_switch": "2.0.0",
         "drupal/features": "3.12",
         "drupal/module_filter": "3.2",
         "drupal/recaptcha": "3.0",
         "drupal/recaptcha_preloader": "1.0.0",
-        "drupal/standwithukraine": "1.3.7"
+        "drupal/standwithukraine": "1.3.7",
+        "kartik-v/bootstrap-checkbox-x": "1.5.7",
+        "oomphinc/composer-installers-extender": "2.0.1"
     },
     "require-dev": {
         "drupal/config2php": "2.0.1",
@@ -41,6 +44,9 @@
                 "Add events for matching entity hooks": "https://www.drupal.org/files/issues/2020-07-19/2551893-85.patch",
                 "News mode": "https://www.drupal.org/files/issues/2022-06-20/drupal-news-mode-3256060-10.patch"
             },
+            "drupal/dark_mode_switch": {
+                "Override browser mode initially": "https://www.drupal.org/files/issues/2022-12-24/dark-mode-switch-override-browser-mode-initially-3329174-2.patch"
+            },
             "drupal/features": {
                 "Set default bundle for site": "https://www.drupal.org/files/issues/2022-01-08/features-current-bundle-2789001-14.patch"
             },
@@ -49,9 +55,12 @@
             }
         },
         "enable-patching": true,
+        "installer-types": [ "library" ],
         "installer-paths": {
+            "libraries/bootstrap-checkbox-x": [ "kartik-v/bootstrap-checkbox-x" ],
             "modules/contrib/{$name}": [ "type:drupal-module" ],
-            "themes/contrib/{$name}": [ "type:drupal-theme" ]
+            "themes/contrib/{$name}": [ "type:drupal-theme" ],
+            "vendor/{$vendor}/{$name}": [ "type:library" ]
         }
     },
     "repositories": [

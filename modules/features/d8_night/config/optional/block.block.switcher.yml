@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - dark_mode_switch
+  theme:
+    - d8_theme
+id: switcher
+theme: d8_theme
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: dark_mode_switch_block
+settings:
+  id: dark_mode_switch_block
+  label: 'D8+ Night'
+  label_display: '0'
+  provider: dark_mode_switch
+visibility: {  }

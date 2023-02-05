@@ -19,6 +19,7 @@ This installation profile requires the following modules:
 * [Config Export to PHP array](https://www.drupal.org/project/config2php)
 * [Config override](https://www.drupal.org/project/config_override)
 * [Configuration Update Manager](https://www.drupal.org/project/config_update)
+* [Dark Mode Switch](https://www.drupal.org/project/dark_mode_switch)
 * [Features](https://www.drupal.org/project/features)
 * [Module Filter](https://www.drupal.org/project/module_filter)
 * [reCAPTCHA](https://www.drupal.org/project/recaptcha)

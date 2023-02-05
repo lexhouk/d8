@@ -21,6 +21,7 @@ function d8_install() {
     'd8_feature_blocks_seven',
     'd8_feature_blocks_d8_theme',
     'd8_ban',
+    'd8_night',
     'd8_standwithukraine',
     'recaptcha',
   ];
@@ -257,4 +258,12 @@ function d8_update_9401() {
  */
 function d8_update_9402() {
   \Drupal::service('module_installer')->install(['contextual']);
+}
+
+/**
+ * Install extensions for dark mode.
+ */
+function d8_update_9403() {
+  \Drupal::service('module_installer')->install(['d8_night']);
+  \Drupal::service('theme_installer')->install(['d8_theme_night']);
 }

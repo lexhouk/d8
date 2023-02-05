@@ -1,0 +1,5 @@
+base:
+  js:
+    d8_night.js: {}
+  dependencies:
+    - dark_mode_switch/dark_mode_switch

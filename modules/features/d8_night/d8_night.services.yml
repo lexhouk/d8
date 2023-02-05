@@ -1,0 +1,6 @@
+services:
+  theme.negotiator.d8_night:
+    class: Drupal\d8_night\Theme\D8NightNegotiator
+    parent: theme.negotiator.default
+    tags:
+      - { name: theme_negotiator }

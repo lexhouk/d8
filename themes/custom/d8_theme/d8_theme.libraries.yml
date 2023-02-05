@@ -2,8 +2,26 @@ base:
   css:
     component:
       css/style.css: {}
+  dependencies:
+    - d8_theme/checkbox
 
 maintenance:
   css:
     theme:
       css/maintenance.css: {}
+
+checkbox:
+  version: VERSION
+  js:
+    ../../../libraries/bootstrap-checkbox-x/js/checkbox-x.min.js:
+      type: external
+    js/checkbox.js: {}
+  css:
+    theme:
+      ../../../libraries/bootstrap-checkbox-x/css/checkbox-x.min.css:
+        type: external
+      css/checkbox.css: { minified: true }
+  dependencies:
+    - bootstrap/theme
+    - core/jquery
+    - d8_night/base

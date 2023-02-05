@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Change the Bootstrap CDN theme according to light or dark mode.
+ */
+
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function d8_night_block_view_dark_mode_switch_block_alter(
+  array &$build,
+  BlockPluginInterface $block
+) {
+  $attached = &$build['#attached'];
+  $attached['library'][] = 'd8_night/base';
+  $attached['drupalSettings']['d8_night'] = !empty($_SESSION['d8_night']);
+}
+
+/**
+ * Implements hook_help().
+ */
+function d8_night_help($route_name, RouteMatchInterface $route_match) {
+  $output = '';
+
+  if ($route_name === 'help.page.d8_night') {
+    $output .= '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('Change the Bootstrap CDN theme according to light or
+dark mode.') . '</p>';
+  }
+
+  return $output;
+}

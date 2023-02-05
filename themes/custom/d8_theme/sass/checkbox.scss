@@ -1,0 +1,33 @@
+@import "variables";
+
+$navbar-form: ($navbar-height - 26px) / 2;
+
+.navbar-form {
+  margin: {
+    top: $navbar-form;
+    bottom: $navbar-form;
+  }
+
+  &.navbar-right {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+.checkbox label.control-label {
+  display: block;
+  padding-left: 0;
+
+  .cbx {
+    margin-left: 0;
+
+    .cbx-icon-krajee {
+      fill: $input-border;
+    }
+  }
+
+  .checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

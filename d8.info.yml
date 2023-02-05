@@ -1,7 +1,7 @@
 name: D8+
 type: profile
 description: 'Basis for the site on Drupal 8/9.'
-version: 0.13.1.131
+version: 0.14.0.132
 core_version_requirement: ^9
 
 distribution:
@@ -25,3 +25,4 @@ themes:
   - seven
   - bootstrap
   - d8_theme
+  - d8_theme_night
