@@ -20,7 +20,7 @@
         "drupal/module_filter": "4.1.1",
         "drupal/recaptcha": "3.2",
         "drupal/recaptcha_preloader": "2.0.0",
-        "drupal/service": "1.0.0",
+        "drupal/service": "1.0.3",
         "drupal/seven": "1.0.0",
         "drupal/standwithukraine": "2.0.0",
         "drupal/symfony_mailer": "1.3.2"
@@ -49,6 +49,9 @@
                 "Integrate Invisible reCAPTCHA option from Google": "https://www.drupal.org/files/issues/2022-12-05/recaptcha-ajax-2493183-164%2Bnocaptcha-2852269-206.patch",
                 "Remove reference to removed $noscript variable": "https://git.drupalcode.org/issue/recaptcha-2852269/-/commit/fc27e7e6ba9b7161e39ab7d1471a7792cb154b22.diff",
                 "Register in the new tab": "https://www.drupal.org/files/issues/2023-03-05/recaptcha-register-in-the-new-tab-3346065-2.patch"
+            },
+            "drupal/service": {
+                "Fix the return type of a main method of a trait for the \"extension.list.module\" service": "https://git.drupalcode.org/project/service/-/commit/ad0b2334423c0677f487f751cbf873eb9cc29a3e.patch"
             },
             "drupal/symfony_mailer": {
                 "Add support for complex address strings in back-compatibility mode": "https://www.drupal.org/files/issues/2023-03-30/symfony_mailer-support_complex_address_strings-3350992-3.patch",

@@ -11,6 +11,7 @@ use Drupal\service\ConfigFactoryTrait;
 use Drupal\service\EntityTypeManagerTrait;
 use Drupal\service\ExtensionPathResolverTrait;
 use Drupal\service\ModuleInstallerTrait;
+use Drupal\service\ModuleListTrait;
 use Drupal\service\StateTrait;
 use Drupal\user\UserInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -27,6 +28,7 @@ class D8Setup implements ContainerInjectionInterface {
   use EntityTypeManagerTrait;
   use ExtensionPathResolverTrait;
   use ModuleInstallerTrait;
+  use ModuleListTrait;
   use StateTrait;
 
   /**
@@ -38,6 +40,7 @@ class D8Setup implements ContainerInjectionInterface {
       ->addEntityTypeManager()
       ->addExtensionPathResolver()
       ->addModuleInstaller()
+      ->addModuleList()
       ->addState();
   }
 
@@ -156,17 +159,10 @@ class D8Setup implements ContainerInjectionInterface {
     string $source = NULL,
     bool $uninstall = FALSE
   ): void {
-    if ($source !== NULL) {
-      /** @var \Drupal\Core\Extension\ModuleExtensionList $extension */
-      $extension = \Drupal::service('extension.list.module');
-
-      if (!$extension->exists($source)) {
-        return;
-      }
+    if ($source === NULL || $this->moduleList()->exists($source)) {
+      $method = ($uninstall ? 'un' : '') . 'install';
+      $this->moduleInstaller()->$method([$target], !$uninstall);
     }
-
-    $method = ($uninstall ? 'un' : '') . 'install';
-    $this->moduleInstaller()->$method([$target], !$uninstall);
   }
 
 }
