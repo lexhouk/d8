@@ -13,7 +13,7 @@
         "drupal/config_update": "2.0.0-alpha3",
         "drupal/core": "10.2.3",
         "drupal/core-composer-scaffold": "10.2.3",
-        "drupal/exception_mailer": "4.0.0",
+        "drupal/exception_mailer": "4.0.6",
         "drupal/extlink": "1.7",
         "drupal/features": "3.14",
         "drupal/fontawesome": "2.26",
@@ -38,9 +38,6 @@
                 "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
                 "Add events for matching entity hooks": "https://www.drupal.org/files/issues/2024-01-30/2551893-122.patch",
                 "News mode": "https://www.drupal.org/files/issues/2024-02-07/drupal-news-mode-3256060-16.patch"
-            },
-            "drupal/exception_mailer": {
-                "Queue workers are broken": "https://www.drupal.org/files/issues/2023-10-25/exception-mailer-queue-worker-3395572-5.patch"
             },
             "drupal/features": {
                 "Set default bundle for site": "https://www.drupal.org/files/issues/2023-07-03/features-current-bundle-2789001-17.patch"

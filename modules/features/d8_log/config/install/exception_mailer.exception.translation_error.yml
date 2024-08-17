@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+id: translation_error
+label: 'Translation (error)'
+description: 'Some text to be translated contains unsupported markup.'
+type: error
+exception: ''
+error_type: locale
+error_severity:
+  3: '3'
+message: 'was skipped because of disallowed or malformed HTML.'
+hostname: ''
+send_email: false
+emails: {  }
+roles: {  }
+email_body: ''
+send_interval: '0'

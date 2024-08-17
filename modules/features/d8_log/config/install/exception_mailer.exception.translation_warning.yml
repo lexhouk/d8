@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+id: translation_warning
+label: 'Translation (warning)'
+description: 'Some text to be translated contains unsupported markup.'
+type: error
+exception: ''
+error_type: locale
+error_severity:
+  4: '4'
+message: 'disallowed HTML string(s) in files:'
+hostname: ''
+send_email: false
+emails: {  }
+roles: {  }
+email_body: ''
+send_interval: '0'
