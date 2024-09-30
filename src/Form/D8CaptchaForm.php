@@ -5,15 +5,16 @@ namespace Drupal\d8\Form;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
 use Drupal\recaptcha\Form\ReCaptchaAdminSettingsForm;
+use Drupal\service\ConfigFormBaseTrait;
 use Drupal\service\ModuleInstallerTrait;
 use Drupal\service\StringTranslationTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Configure reCAPTCHA settings for this profile.
  */
 class D8CaptchaForm extends ReCaptchaAdminSettingsForm {
 
+  use ConfigFormBaseTrait;
   use ModuleInstallerTrait;
   use StringTranslationTrait;
 
@@ -28,10 +29,8 @@ class D8CaptchaForm extends ReCaptchaAdminSettingsForm {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)
-      ->addModuleInstaller($container)
-      ->addStringTranslation();
+  protected function addServices(): static {
+    return $this->addModuleInstaller()->addStringTranslation();
   }
 
   /**

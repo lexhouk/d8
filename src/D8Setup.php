@@ -14,7 +14,6 @@ use Drupal\service\ModuleListTrait;
 use Drupal\service\StateTrait;
 use Drupal\service\StringTranslationTrait;
 use Drupal\user\UserInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides functionality to set up installation profile.
@@ -38,8 +37,8 @@ class D8Setup extends D8BuilderBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)
+  protected function addServices(): static {
+    return parent::addServices()
       ->addEntityTypeManager()
       ->addExtensionPathResolver()
       ->addModuleInstaller()

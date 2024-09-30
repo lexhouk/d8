@@ -20,7 +20,7 @@
         "drupal/module_filter": "5.0.3",
         "drupal/recaptcha": "3.3",
         "drupal/recaptcha_preloader": "2.0.1",
-        "drupal/service": "2.0.1",
+        "drupal/service": "2.1.x-dev",
         "drupal/seven": "1.0.0",
         "drupal/standwithukraine": "2.0.2",
         "drupal/symfony_mailer": "1.5.0",

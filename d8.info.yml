@@ -3,7 +3,7 @@ description: The installation profile for CMS Drupal 10 based on the most common
 
 type: profile
 core_version_requirement: ^10.3
-version: 0.20.0.186
+version: 0.21.0.187
 
 php: 8.3
 
@@ -29,7 +29,7 @@ dependencies:
   - jquery_ui_draggable:jquery_ui_draggable
   - jquery_ui_resizable:jquery_ui_resizable
   - module_filter:module_filter
-  - service:service
+  - service:service (>=2.1.0)
 
 themes:
   - seven

@@ -4,8 +4,8 @@ namespace Drupal\d8_theme\Plugin\Alter;
 
 use Drupal\bootstrap\Plugin\Alter\ThemeSuggestions as ThemeSuggestionsBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\service\PluginBaseTrait;
 use Drupal\service\RouteMatchTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Implements hook_theme_suggestions_alter().
@@ -16,19 +16,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class ThemeSuggestions extends ThemeSuggestionsBase implements ContainerFactoryPluginInterface {
 
+  use PluginBaseTrait;
   use RouteMatchTrait;
 
   /**
    * {@inheritdoc}
    */
-  public static function create(
-    ContainerInterface $container,
-    array $configuration,
-    $plugin_id,
-    $plugin_definition
-  ): static {
-    return (new static($configuration, $plugin_id, $plugin_definition))
-      ->addRouteMatch($container);
+  protected function addServices(): static {
+    return $this->addRouteMatch();
   }
 
   /**

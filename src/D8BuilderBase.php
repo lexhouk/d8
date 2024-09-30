@@ -2,9 +2,8 @@
 
 namespace Drupal\d8;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\service\ClassResolverBase;
 use Drupal\service\ConfigFactoryTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a base for hook wrappers.
@@ -12,15 +11,15 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @internal
  *   This is an internal utility class wrapping hook implementations.
  */
-abstract class D8BuilderBase implements ContainerInjectionInterface {
+abstract class D8BuilderBase extends ClassResolverBase {
 
   use ConfigFactoryTrait;
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return (new static())->addConfigFactory($container);
+  protected function addServices(): static {
+    return $this->addConfigFactory();
   }
 
 }

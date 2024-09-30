@@ -15,7 +15,7 @@ use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
 #[FieldFormatter(
   id: 'd8_link',
   label: new TranslatableMarkup('D8+ Link'),
-  description: new TranslatableMarkup('Delete the URL scheme and default sub-domain from the link title.'),
+  description: new TranslatableMarkup('Remove the URL scheme and default sub-domain from the link title.'),
   field_types: ['link'],
 )]
 class D8LinkFormatter extends LinkFormatter {

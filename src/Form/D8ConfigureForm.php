@@ -5,7 +5,7 @@ namespace Drupal\d8\Form;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Installer\Form\SiteConfigureForm;
 use Drupal\service\ConfigFactoryTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\service\ConfigFormBaseTrait;
 
 /**
  * Provides the site configuration form.
@@ -14,13 +14,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class D8ConfigureForm extends SiteConfigureForm {
 
+  use ConfigFormBaseTrait;
   use ConfigFactoryTrait;
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)->addConfigFactory($container);
+  protected function addServices(): static {
+    return $this->addConfigFactory();
   }
 
   /**

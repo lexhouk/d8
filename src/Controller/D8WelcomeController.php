@@ -2,13 +2,12 @@
 
 namespace Drupal\d8\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
 use Drupal\service\ConfigFactoryTrait;
+use Drupal\service\ControllerBase;
 use Drupal\service\EntityTypeManagerTrait;
 use Drupal\service\RouteMatchTrait;
 use Drupal\service\StateTrait;
 use Drupal\service\TitleResolverTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -25,9 +24,9 @@ class D8WelcomeController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)
-      ->addConfigFactory($container)
+  protected function addServices(): static {
+    return $this
+      ->addConfigFactory()
       ->addRouteMatch()
       ->addState()
       ->addTitleResolver();

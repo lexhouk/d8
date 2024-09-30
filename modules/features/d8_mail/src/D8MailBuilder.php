@@ -8,7 +8,6 @@ use Drupal\service\DateFormatterTrait;
 use Drupal\service\RequestStackTrait;
 use Drupal\service\StringTranslationTrait;
 use Drupal\service\TimeTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides functionality for styling E-mail letters.
@@ -31,8 +30,8 @@ class D8MailBuilder extends D8BuilderBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)
+  protected function addServices(): static {
+    return parent::addServices()
       ->addDateFormatter()
       ->addRequestStack()
       ->addStringTranslation()

@@ -13,7 +13,9 @@ class D8Url extends Url {
   /**
    * {@inheritdoc}
    */
-  public function toString($collect_bubbleable_metadata = FALSE): GeneratedUrl|string {
+  public function toString(
+    $collect_bubbleable_metadata = FALSE
+  ): GeneratedUrl|string {
     $url = parent::toString($collect_bubbleable_metadata);
 
     $modify = &drupal_static('d8_link');

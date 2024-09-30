@@ -2,9 +2,8 @@
 
 namespace Drupal\d8\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
+use Drupal\service\ControllerBase;
 use Drupal\service\StateTrait;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -18,8 +17,8 @@ class D8MaintenanceController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): static {
-    return parent::create($container)->addState($container);
+  protected function addServices(): static {
+    return $this->addState();
   }
 
   /**
