@@ -3,7 +3,7 @@ description: Provides a wrapper for the StandWithUkraine 🇺🇦 module.
 package: D8+
 
 type: module
-core_version_requirement: ^10.1
+core_version_requirement: ^10.2 || ^11
 
 dependencies:
   - standwithukraine:standwithukraine

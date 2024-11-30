@@ -75,7 +75,7 @@ function _d8_update(): void {
     $sandbox = [];
 
     foreach (func_get_args() as $number) {
-      $function = $matches[1] . '_update_' . $number;
+      $function = "{$matches[1]}_update_$number";
 
       $function($sandbox);
     }

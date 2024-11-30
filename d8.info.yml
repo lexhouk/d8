@@ -3,7 +3,7 @@ description: The installation profile for CMS Drupal 10 based on the most common
 
 type: profile
 core_version_requirement: ^10.3
-version: 0.21.0.188
+version: 0.21.1.189
 
 distribution:
   name: D8+

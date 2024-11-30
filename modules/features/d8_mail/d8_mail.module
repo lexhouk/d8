@@ -19,9 +19,7 @@ function d8_mail_help(
   $output = '';
 
   if ($route_name === 'help.page.d8_mail') {
-    $output .= '<h3>' . t('About') . '</h3>';
-
-    $output .= '<p>';
+    $output .= "<h3>{t('About')}</h3><p>";
 
     $url = Url::fromRoute('help.page', ['name' => 'symfony_mailer']);
 
@@ -69,7 +67,7 @@ function d8_mail_theme(
   string $path,
 ): array {
   $name = 'email_wrap';
-  return [$name . '__html' => ['base hook' => $name]];
+  return ["{$name}__html" => ['base hook' => $name]];
 }
 
 /**
@@ -80,6 +78,6 @@ function d8_mail_theme_suggestions_email_wrap_alter(
   array $variables,
 ): void {
   if ($variables['is_html']) {
-    $suggestions[] = $variables['theme_hook_original'] . '__html';
+    $suggestions[] = "{$variables['theme_hook_original']}__html";
   }
 }

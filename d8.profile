@@ -51,7 +51,7 @@ function _d8_install_configure_form_submit(
     $values = [];
 
     foreach (['name', 'mail'] as $key) {
-      $values[$key] = (string) $form_state->getValue('site_' . $key);
+      $values[$key] = (string) $form_state->getValue("site_$key");
     }
 
     \Drupal::state()->set('d8', array_filter($values));
