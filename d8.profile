@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Provides installation profile for Drupal 10.
+ * Provides installation profile for Drupal 10/11.
  *
  * It is based on the most common modules and themes that form the basis for
  * creating a stable site.

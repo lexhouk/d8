@@ -3,7 +3,7 @@ description: Provides blocks for the D8+ theme.
 package: D8+
 
 type: module
-core_version_requirement: ^10.3
+core_version_requirement: ^10.3 || ^11
 
 dependencies:
   - d8:d8_menu
