@@ -3,7 +3,7 @@ description: Provides a wrapper for the Menu UI module and related.
 package: D8+
 
 type: module
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 
 dependencies:
   - drupal:system

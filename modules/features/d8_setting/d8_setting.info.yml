@@ -3,7 +3,7 @@ description: Provides basic configuration.
 package: D8+
 
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 
 dependencies:
   - drupal:dblog
