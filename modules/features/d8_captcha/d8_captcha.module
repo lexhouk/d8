@@ -21,23 +21,3 @@ function d8_captcha_captcha_alter(array &$captcha, array $info): void {
     }
   }
 }
-
-/**
- * Implements hook_library_info_alter().
- */
-function d8_captcha_library_info_alter(
-  array &$libraries,
-  string $extension,
-): void {
-  if (
-    $extension === 'recaptcha' &&
-    isset($libraries[$name = "$extension.invisible"])
-  ) {
-    /** @var \Drupal\Core\Extension\ExtensionPathResolver $resolver */
-    $resolver = \Drupal::service('extension.path.resolver');
-
-    $path = $resolver->getPath('module', 'd8_captcha');
-
-    $libraries[$name]['js'] = ["/$path/js/$name.js" => []];
-  }
-}

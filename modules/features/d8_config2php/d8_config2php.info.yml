@@ -3,7 +3,8 @@ description: Provides a wrapper for the Config Export to PHP array module.
 package: D8+
 
 type: module
-core_version_requirement: ^10 || ^11
+core_version_requirement: '>=11'
 
 dependencies:
+  - d8:d8 (>=0.23.0.202)
   - config2php:config2php

@@ -1,9 +1,9 @@
 name: D8+
-description: The installation profile for CMS Drupal 10 based on the most common modules and themes that form the basis for creating a stable site.
+description: The installation profile for CMS Drupal 11 based on the most common modules and themes that form the basis for creating a stable site.
 
 type: profile
-core_version_requirement: ^10.3
-version: 0.22.2.201
+core_version_requirement: '>=11'
+version: 0.23.0.202
 
 php: 8.3
 

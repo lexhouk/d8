@@ -2,27 +2,5 @@
 
 /**
  * @file
- * Provides a wrapper for the External Links module and related ones.
+ * Provides a wrapper for the External Links module and related.
  */
-
-use Drupal\Component\Utility\NestedArray;
-
-/**
- * Implements hook_page_attachments().
- */
-function d8_link_page_attachments(array &$attachments): void {
-  $attachments['#attached']['library'][] = 'd8_link/base';
-}
-
-/**
- * Implements hook_page_attachments_alter().
- */
-function d8_link_page_attachments_alter(array &$attachments): void {
-  $parents = ['#attached', 'drupalSettings', 'data', 'extlink'];
-
-  if (NestedArray::keyExists($attachments, $parents)) {
-    $parents[] = 'extTargetAppendNewWindowLabel';
-
-    NestedArray::setValue($attachments, $parents, '');
-  }
-}

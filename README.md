@@ -1,6 +1,6 @@
 # D8+
 
-The installation profile for CMS Drupal 10 based on the most common modules and
+The installation profile for CMS Drupal 11 based on the most common modules and
 themes that form the basis for creating a stable site.
 
 [![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd500.svg?labelColor=005bbb)](https://supportukrainenow.org)
@@ -10,7 +10,7 @@ themes that form the basis for creating a stable site.
 
 ## Requirements
 
-This installation profile requires the following modules:
+### Modules
 
 - [Admin Toolbar](https://www.drupal.org/project/admin_toolbar)
 - [Automatic IP ban (Autoban)](https://www.drupal.org/project/autoban)
@@ -28,7 +28,7 @@ This installation profile requires the following modules:
 - [Service](https://www.drupal.org/project/service)
 - [StandWithUkraine 🇺🇦](https://www.drupal.org/project/standwithukraine)
 
-This installation profile requires the following themes:
+### Themes
 
 - [Bootstrap](https://www.drupal.org/project/bootstrap)
 - [Seven](https://www.drupal.org/project/seven)
@@ -43,7 +43,9 @@ in PHP array style.
 
 ## Features
 
-### New installation step for setting captcha keys
+### Captcha
+
+New installation step for setting captcha keys.
 
 ![captcha](images/captcha.png "captcha")
 

@@ -38,7 +38,7 @@ class D8WelcomeController extends ControllerBase {
    * @param \Symfony\Component\HttpFoundation\Request $request
    *    The request.
    *
-   * @see _d8_install_configure_form_submit()
+   * @see \Drupal\d8\Form\D8ConfigureForm::submitForm()
    */
   public function page(Request $request): array {
     $config = $this->configFactory()->getEditable('system.site');

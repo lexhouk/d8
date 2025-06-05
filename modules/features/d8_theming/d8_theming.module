@@ -4,17 +4,3 @@
  * @file
  * Provides blocks and icons for the D8+ theme.
  */
-
-/**
- * Implements hook_link_alter().
- */
-function d8_theming_link_alter(array &$variables): void {
-  $attributes = &$variables['options']['attributes'];
-
-  if (
-    !str_starts_with($attributes['id'] ?? '', 'toolbar-link-') &&
-    array_intersect($attributes['class'] ?? [], ['btn', 'toolbar-icon']) === []
-  ) {
-    $attributes['class'][] = 'link-secondary';
-  }
-}

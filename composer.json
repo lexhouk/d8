@@ -1,6 +1,6 @@
 {
     "name": "lexhouk/d8",
-    "description": "The installation profile for CMS Drupal 10 based on the most common modules and themes that form the basis for creating a stable site.",
+    "description": "The installation profile for CMS Drupal 11 based on the most common modules and themes that form the basis for creating a stable site.",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
     "require": {
@@ -11,8 +11,8 @@
         "drupal/bootstrap": "5.0.1",
         "drupal/captcha": "2.0.6",
         "drupal/config_update": "2.0.0-alpha4",
-        "drupal/core": "10.4.5",
-        "drupal/core-composer-scaffold": "10.4.5",
+        "drupal/core": "11.1.7",
+        "drupal/core-composer-scaffold": "11.1.7",
         "drupal/exception_mailer": "4.0.7",
         "drupal/extlink": "2.0.2",
         "drupal/features": "dev-3447460-drupal-11-compatibility#40732dfd317473d9913c9e97d0cf7e4d68a78934",
@@ -22,7 +22,7 @@
         "drupal/recaptcha": "3.3",
         "drupal/recaptcha_preloader": "2.0.1",
         "drupal/service": "3.0.0",
-        "drupal/seven": "1.0.0",
+        "drupal/seven": "dev-3434485-d11-compatibility#0c070973e2d97d4a19f04cf99408e22bc9856fef",
         "drupal/standwithukraine": "3.0.0",
         "drupal/symfony_mailer": "1.5.0",
         "php": "^8.3",
@@ -37,8 +37,7 @@
                 "Mixed links": "https://www.drupal.org/files/issues/2023-09-09/autoban-mixed-links-3386212-2.patch"
             },
             "drupal/core": {
-                "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2019-12-14/default-theme-favicon-for-administration-theme-2981434-7.patch",
-                "Add events for matching entity hooks": "https://www.drupal.org/files/issues/2024-01-30/2551893-122.patch",
+                "Default theme favicon for administration theme": "https://www.drupal.org/files/issues/2025-03-20/default-theme-favicon-for-administration-theme-2981434-16.patch",
                 "News mode": "https://www.drupal.org/files/issues/2024-09-10/drupal-news-mode-3256060-25.patch"
             },
             "drupal/extlink": {
@@ -65,6 +64,10 @@
         {
             "type": "git",
             "url": "https://git.drupalcode.org/issue/features-3447460.git"
+        },
+        {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/seven-3434485.git"
         }
     ]
 }
