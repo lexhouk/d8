@@ -42,60 +42,7 @@ function d8_install_tasks_alter(array &$tasks, array $install_state): void {
  * Implements hook_update_last_removed().
  */
 function d8_update_last_removed(): int {
-  return 10203;
-}
-
-/**
- * Check only for security updates, even for uninstalled extensions.
- */
-function d8_update_10301(array &$sandbox): void {
-  \Drupal::configFactory()->getEditable('update.settings')
-    ->set('check.disabled_extensions', TRUE)
-    ->set('notification.threshold', 'security')
-    ->save();
-}
-
-/**
- * Install Help module.
- */
-function d8_update_10302(array &$sandbox): void {
-  \Drupal::classResolver(D8Setup::class)->module('help');
-}
-
-/**
- * Install Idle module.
- */
-function d8_update_10401(array &$sandbox): void {
-  \Drupal::classResolver(D8Setup::class)->module('idle');
-}
-
-/**
- * Uninstall the news mode feature.
- */
-function d8_update_11101(array &$sandbox): void {
-  \Drupal::configFactory()->getEditable('update.settings')
-    ->clear('news')
-    ->save();
-
-  \Drupal::state()->deleteMultiple(['update.news', 'update.versions']);
-}
-
-/**
- * Replace theme Seven with theme Claro.
- */
-function d8_update_11201(array &$sandbox): void {
-  /** @var \Drupal\Core\Extension\ThemeInstallerInterface $theme_installer */
-  $theme_installer = \Drupal::service('theme_installer');
-
-  if ($theme_installer->install(['claro'])) {
-    \Drupal::configFactory()->getEditable('system.theme')
-      ->set('admin', 'claro')
-      ->save();
-
-    $theme_installer->uninstall(['seven']);
-
-    \Drupal::classResolver(D8Setup::class)->module('d8_seven', uninstall: TRUE);
-  }
+  return 11201;
 }
 
 /**

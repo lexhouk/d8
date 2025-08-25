@@ -7,7 +7,7 @@
         "composer/installers": "1.11.0",
         "cweagans/composer-patches": "^1.0",
         "drupal/admin_toolbar": "3.5.0",
-        "drupal/autoban": "1.10",
+        "drupal/autoban": "1.11",
         "drupal/bootstrap": "5.0.1",
         "drupal/captcha": "2.0.7",
         "drupal/config_update": "2.0.0-alpha4",
@@ -22,7 +22,6 @@
         "drupal/recaptcha": "3.3",
         "drupal/recaptcha_preloader": "2.0.2",
         "drupal/service": "3.0.1",
-        "drupal/seven": "dev-3434485-d11-compatibility#0c070973e2d97d4a19f04cf99408e22bc9856fef",
         "drupal/standwithukraine": "3.0.1",
         "drupal/symfony_mailer": "1.6.2",
         "php": "^8.3",
@@ -45,7 +44,8 @@
             },
             "drupal/features": {
                 "Set default bundle for site": "https://www.drupal.org/files/issues/2023-07-03/features-current-bundle-2789001-17.patch",
-                "Fix method signature in FeaturesConfigInstaller::findPreExistingConfiguration() for Drupal 11.2+ compatibility": "https://www.drupal.org/files/issues/2025-07-15/features-drupal11-method-signature-fix.patch"
+                "Fix method signature in FeaturesConfigInstaller::findPreExistingConfiguration() for Drupal 11.2+ compatibility": "https://www.drupal.org/files/issues/2025-07-15/features-drupal11-method-signature-fix.patch",
+                "PHP 8.4 compatibility": "https://git.drupalcode.org/issue/features-3516043/-/commit/6608b27167d11e04f840103d1470a5687078b677.patch"
             },
             "drupal/symfony_mailer": {
                 "Add support for complex address strings in back-compatibility mode": "https://www.drupal.org/files/issues/2025-05-28/symfony_mailer-support_complex_address_strings-3350992-38.patch"
@@ -65,10 +65,6 @@
         {
             "type": "git",
             "url": "https://git.drupalcode.org/issue/features-3447460.git"
-        },
-        {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/seven-3434485.git"
         }
     ]
 }

@@ -31,7 +31,6 @@ themes that form the basis for creating a stable site.
 ### Themes
 
 - [Bootstrap](https://www.drupal.org/project/bootstrap)
-- [Seven](https://www.drupal.org/project/seven)
 
 
 ## Recommended module
